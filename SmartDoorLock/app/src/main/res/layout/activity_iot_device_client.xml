@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="1dp"
+    android:background="@drawable/house"
+
+    tools:context="com.example.smartlock.SmartLockClient">
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Door Alarm Switch"
+        android:id="@+id/switch3"
+        android:checked="false"
+        android:layout_alignBottom="@+id/tmpView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="39dp" />
+
+    <AnalogClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/analogClock"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <com.example.smartlock.TemperatureView
+        android:layout_width="wrap_content"
+        android:layout_height="1000dp"
+        android:id="@+id/tmpView"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/analogClock"
+        android:layout_toEndOf="@+id/analogClock" />
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alertView"
+        android:layout_above="@+id/switch3"
+        android:layout_toLeftOf="@+id/tmpView"
+        android:layout_toStartOf="@+id/tmpView" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heater"
+        android:id="@+id/switch1"
+        android:layout_below="@+id/analogClock"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="54dp"
+        style="display:none"
+        android:visibility="invisible" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cooler"
+        android:id="@+id/switch2"
+        android:layout_below="@+id/switch1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="65dp"
+        android:visibility="invisible" />
+
+
+
+
+</RelativeLayout>

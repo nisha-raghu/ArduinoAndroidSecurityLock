@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.example.smartlock"
+        minSdkVersion 18
+        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.android.gms:play-services:5.0.+'
+    compile files('libs/gdata-spreadsheet-3.0.jar')
+    compile files('libs/gdata-core-1.0.jar')
+    compile files('libs/gdata-maps-2.0.jar')
+    compile files('libs/gdata-client-1.0.jar')
+    compile files('libs/guava-18.0.jar')
+    //compile files('src/main/res/lib/gdata-appsforyourdomain-1.0.jar')
+}
